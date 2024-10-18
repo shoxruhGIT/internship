@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Input, Loader } from "../ui";
+import { Input } from "../ui";
 import { useSelector, useDispatch } from "react-redux";
 import { signUserFailure, signUserStart, signUserSuccess } from "../slice/auth";
 import AuthService from "../service/auth";

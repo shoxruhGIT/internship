@@ -12,7 +12,6 @@ import ArticleAuth from "../service/article";
 const Main = () => {
   const { articles, isLoading } = useSelector((state) => state.article);
   const { loggidIn, user } = useSelector((state) => state.auth);
-  console.log(articles);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -80,6 +79,9 @@ const Main = () => {
                       {loggidIn && user.username === item.author.username && (
                         <>
                           <button
+                            onClick={() =>
+                              navigate(`/edit-article/${item.slug}`)
+                            }
                             type="button"
                             className="btn btn-sm btn-outline-primary"
                           >

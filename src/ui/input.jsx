@@ -1,6 +1,6 @@
 const Input = ({ label, state, setState }) => {
   return (
-    <div class="form-floating">
+    <div>
       <input
         type="text"
         class="form-control"
@@ -9,7 +9,6 @@ const Input = ({ label, state, setState }) => {
         value={state}
         onChange={(e) => setState(e.target.value)}
       />
-      <label htmlFor="floatingInput">{label}</label>
     </div>
   );
 };
